@@ -57,7 +57,7 @@ object DetailForm: TDetailForm
       object lblType: TLabel
         Left = 200
         Top = 12
-        Width = 32
+        Width = 30
         Height = 13
         Caption = 'Type :'
         Transparent = True
@@ -256,7 +256,7 @@ object DetailForm: TDetailForm
       object lbl33: TLabel
         Left = 120
         Top = 16
-        Width = 29
+        Width = 27
         Height = 13
         Alignment = taCenter
         Caption = 'R.I.B.'
@@ -265,7 +265,7 @@ object DetailForm: TDetailForm
       object lbl34: TLabel
         Left = 288
         Top = 16
-        Width = 35
+        Width = 33
         Height = 13
         Alignment = taCenter
         Caption = 'Devise'
@@ -406,6 +406,10 @@ object DetailForm: TDetailForm
       Caption = 'Contacts'
       ImageIndex = 2
       PopupMenu = pmMnuCtc
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object lbl19: TLabel
         Left = 16
         Top = 16
@@ -457,7 +461,7 @@ object DetailForm: TDetailForm
         Width = 48
         Height = 21
         Style = csDropDownList
-        ItemHeight = 13
+        ItemHeight = 0
         TabOrder = 1
       end
       object cbCtcService: TComboBox
@@ -466,7 +470,7 @@ object DetailForm: TDetailForm
         Width = 136
         Height = 21
         Style = csDropDownList
-        ItemHeight = 13
+        ItemHeight = 0
         TabOrder = 4
       end
       object edtCtcNom: TEdit

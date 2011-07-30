@@ -93,7 +93,7 @@ procedure TMainForm.mmiFichierQuitterClick(Sender: TObject);
 begin
   CloseAllFrm();
   { A priori comme on sait qu'il n'y a qu'une fenêtre enfant ici on pourrait
-    uniquement fermer ListeTiersForm comme ci-dessous, mais pas si il y avait
+    uniquement fermer ListeTiersForm comme ci-dessous, mais pas s'il y avait
     plusieurs fenêtres filles. }
 //  if assigned(TListeTiersForm.ListeTiersForm) then
 //    TListeTiersForm.ListeTiersForm.Close;
@@ -105,7 +105,7 @@ begin
   try
     CloseAllFrm();
     { A priori comme on sait qu'il n'y a qu'une fenêtre enfant ici on pourrait
-      uniquement fermer ListeTiersForm comme ci-dessous, mais pas si il y avait
+      uniquement fermer ListeTiersForm comme ci-dessous, mais pas s'il y avait
       plusieurs fenêtres filles. }
 //    if assigned(TListeTiersForm.ListeTiersForm) then
 //      TListeTiersForm.ListeTiersForm.Close;
@@ -159,14 +159,14 @@ begin
   try
     CloseAllFrm();
     { A priori comme on sait qu'il n'y a qu'une fenêtre enfant ici on pourrait
-      uniquement fermer ListeTiersForm comme ci-dessous, mais pas si il y avait
+      uniquement fermer ListeTiersForm comme ci-dessous, mais pas s'il y avait
       plusieurs fenêtres filles. }
 //    if assigned(TListeTiersForm.ListeTiersForm) then
 //      TListeTiersForm.ListeTiersForm.Close;
 
     { Hack permettant de corriger le bug suivant : Si une fenêtre tiers est
       ouverte ET SI on a cliqué sur au moins un contact ou une banque, AV en
-      sortie, opération alors que la base est fermée. Pourtant le clic sur une
+      sortie d'opération alors que la base est fermée. Pourtant le clic sur une
       banque ne fait quasimment rien, mais ProcessMessages résout le problème }
     Application.ProcessMessages;
     if ((FBaseCpta <> nil) and FBaseCpta.IsOpen) then
@@ -191,8 +191,8 @@ begin
   { Autre méthode http://delphi.about.com/od/vclusing/a/tscreen.htm :
   modifié en supposant que 0 est toujours le form principal }
   { Quand j'ai ouvert DetailFrm et fermé directement ListeTiersFrm plante car
-   FormCount vaut 2 au lieu de 1 (ListeTiersFrm est tjs là
-   Suite : Parce que je fermai mal les fenêtre, sinon marhe mieux }
+   FormCount vaut 2 au lieu de 1 (ListeTiersFrm est toujours là
+   Suite : Parce que je fermais mal les fenêtre, sinon marche mieux }
   for I := Screen.FormCount -1 downto 1 do
     Screen.Forms[I].Close;
 end;

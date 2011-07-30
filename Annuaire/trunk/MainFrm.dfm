@@ -3,8 +3,8 @@ object MainForm: TMainForm
   Top = 0
   BorderWidth = 1
   Caption = 'Annuaire'
-  ClientHeight = 264
-  ClientWidth = 260
+  ClientHeight = 262
+  ClientWidth = 258
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -25,8 +25,8 @@ object MainForm: TMainForm
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 260
-    Height = 264
+    Width = 258
+    Height = 262
     Align = alClient
     BevelEdges = [beLeft, beRight, beBottom]
     Color = clAppWorkSpace

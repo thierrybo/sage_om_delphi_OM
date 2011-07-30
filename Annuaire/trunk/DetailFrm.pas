@@ -133,18 +133,18 @@ begin
   try
     with FTiersCourant do
     begin
-      CT_Intitule   := ledtIntitule.Text;
-      CT_Contact    := ledtContact.Text;
-      CT_Adresse    := ledtAdresse.Text;
-      CT_Complement := ledtComplement.Text;
-      CT_CodePostal := ledtCP.Text;
-      CT_EMail      := ledtEMail.Text;
-      CT_CodeRegion := ledtRegion.Text;
-      CT_Site       := ledtSite.Text;
-      CT_Telecopie  := ledtTelecopie.Text;
-      CT_Telephone  := ledtTelephone.Text;
-      CT_Ville      := ledtVille.Text;
-      CT_Pays       := ledtPays.Text;
+      CT_Intitule        := ledtIntitule.Text;
+      CT_Contact         := ledtContact.Text;
+      Adresse.Adresse    := ledtAdresse.Text;
+      Adresse.Complement := ledtComplement.Text;
+      Adresse.CodePostal := ledtCP.Text;
+      Telecom.EMail      := ledtEMail.Text;
+      Adresse.CodeRegion := ledtRegion.Text;
+      Telecom.Site       := ledtSite.Text;
+      Telecom.Telecopie  := ledtTelecopie.Text;
+      Telecom.Telephone  := ledtTelephone.Text;
+      Adresse.Ville      := ledtVille.Text;
+      Adresse.Pays       := ledtPays.Text;
       SetDefault();
       WriteDefault();
     end;
@@ -161,7 +161,7 @@ end;
 procedure TDetailForm.InitForm;
 begin
   try
-    { Pour être sur que le permier onglet soit sélectionné sinon enregistre le
+    { Pour être sur que le premier onglet soit sélectionné sinon enregistre le
       dernier onglet sélectionné en mode conception comme onglet actif }
     pgcTiers.ActivePage := tshCoord;
     if assigned(FTiersCourant) then
@@ -173,17 +173,17 @@ begin
         lblTypeTiers.Caption  := TypeTiers(CT_Type);
         ledtIntitule.Text     := CT_Intitule;
         ledtContact.Text      := CT_Contact;
-        ledtAdresse.Text      := CT_Adresse;
-        ledtComplement.Text   := CT_Complement;
+        ledtAdresse.Text      := Adresse.Adresse;
+        ledtComplement.Text   := Adresse.Complement;
         ledtContact.Text      := CT_Contact;
-        ledtCP.Text           := CT_CodePostal;
-        ledtEMail.Text        := CT_EMail;
-        ledtRegion.Text       := CT_CodeRegion;
-        ledtSite.Text         := CT_Site;
-        ledtTelecopie.Text    := CT_Telecopie;
-        ledtTelephone.Text    := CT_Telephone;
-        ledtVille.Text        := CT_Ville;
-        ledtPays.Text         := CT_Pays;
+        ledtCP.Text           := Adresse.CodePostal;
+        ledtEMail.Text        := Telecom.EMail;
+        ledtRegion.Text       := Adresse.CodeRegion;
+        ledtSite.Text         := Telecom.Site;
+        ledtTelecopie.Text    := Telecom.Telecopie;
+        ledtTelephone.Text    := Telecom.Telephone;
+        ledtVille.Text        := Adresse.Ville;
+        ledtPays.Text         := Adresse.Pays;
       end;
     end else begin
       Close();
@@ -447,7 +447,7 @@ var
 begin
   try
     { Libérer les objets associés du ListView avant d'en affecter de nouveau,
-      sonon leak. }
+      sinon leak. }
     FreeListViewObjects(LvContact.Items);
     lvContact.Clear();
     for i := 0 to 3 do
@@ -468,13 +468,13 @@ begin
       with (IbiColContact.Item[I] as IBIContact2) do
       begin
         { Contrairement à VB je suis obligé de passer par un Objet Delphi
-          (TTiersContact) pour stocker l'OID de l'IBIContatc2 }
+          (TTiersContact) pour stocker l'OID de l'IBIContact2 }
 //        LvContact.AddItem(Nom, TObject(OID) );
         LvContact.AddItem(Nom, TTiersContact.Create(IbiColContact.Item[I] as IBIContact2));
         LvContact.Items[I - 1].ImageIndex := I - 1;
         LvContact.Items[I - 1].SubItems.Add(Fonction);
-        LvContact.Items[I - 1].SubItems.Add(Telephone);
-        LvContact.Items[I - 1].SubItems.Add(TelPortable);
+        LvContact.Items[I - 1].SubItems.Add(Telecom.Telephone);
+        LvContact.Items[I - 1].SubItems.Add(Telecom.Portable);
       end;
     end;
     FContactCourant := nil;
@@ -540,10 +540,10 @@ Me.ContactCourant = BaseCpta.FactoryTiers.ReadNumero(Me.TiersCourant.CT_Num)
       edtCtcNom.Text       := Nom;
       ledtCtcPrenom.Text   := Prenom;
       ledtCtcFonction.Text := Fonction;
-      ledtCtcTel.Text      := Telephone;
-      ledtCtcPortable.Text := TelPortable;
-      ledtCtcCopie.Text    := Telecopie;
-      ledtCtcMail.Text     := EMail;
+      ledtCtcTel.Text      := Telecom.Telephone;
+      ledtCtcPortable.Text := Telecom.Portable;
+      ledtCtcCopie.Text    := Telecom.Telecopie;
+      ledtCtcMail.Text     := Telecom.EMail;
 
       { VB:
         Me.cbCtcService.Text = New CBPService(.ServiceContact).ToString
@@ -579,11 +579,11 @@ begin
 //                          TCBPService).GetInterface;
       ServiceContact  := FContactCourant.ServiceContact.FactoryServiceContact.
                           ReadIntitule(cbCtcService.Items[cbCtcService.ItemIndex]);
-      Telephone       := ledtCtcTel.Text;
-      Telecopie       := ledtCtcCopie.Text;
-      TelPortable     := ledtCtcPortable.Text;
-      EMail           := ledtCtcMail.Text;
-      Civilite        := CiviliteContact(cbCivilite.Text);
+      Telecom.Telephone := ledtCtcTel.Text;
+      Telecom.Telecopie := ledtCtcCopie.Text;
+      Telecom.Portable  := ledtCtcPortable.Text;
+      Telecom.EMail     := ledtCtcMail.Text;
+      Civilite          := CiviliteContact(cbCivilite.Text);
       SetDefault();
       WriteDefault();
     end;

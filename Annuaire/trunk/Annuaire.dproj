@@ -115,6 +115,7 @@
 						<VersionInfoKeys Name="Comments"/>
 					</VersionInfoKeys>
 					<Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\All Users\Documents\RAD Studio\6.0\Bpl\Objets100V3.bpl">Sage 100 Objets Métiers V3</Excluded_Packages>
 						<Excluded_Packages Name="$(BDS)\bin\dcloffice2k120.bpl">Composants Microsoft Office 2000 Sample Automation Server Wrapper</Excluded_Packages>
 						<Excluded_Packages Name="$(BDS)\bin\dclofficexp120.bpl">Composants Microsoft Office XP Sample Automation Server Wrapper</Excluded_Packages>
 					</Excluded_Packages>
