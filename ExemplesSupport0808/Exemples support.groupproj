@@ -1,0 +1,156 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{025EBBC6-CBE8-4E2F-9145-21B871024968}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="01_CreationBaseCpta\CreationBaseCpta.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="02_OuvertureFermetureBaseCpta\OuvertureFermetureBaseCpta.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="03_CreationBaseCial\CreationBaseCial.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="04_CreationObjetClient\CreationObjetClient.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="05_LectureDevise\LectureDevise.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="06_CreationCollection\CreationCollection.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="07_EnregistrementObjet\EnregistrementObjet.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="08_SuppressionTiers\SuppressionTiers.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="09_HierarchieObjet\HierarchieObjet.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="10_Enumerations\Enumerations.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="11_EcrituresComptables\EcrituresComptables.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="CreationBaseCpta">
+			<MSBuild Projects="01_CreationBaseCpta\CreationBaseCpta.dproj"/>
+		</Target>
+		<Target Name="CreationBaseCpta:Clean">
+			<MSBuild Targets="Clean" Projects="01_CreationBaseCpta\CreationBaseCpta.dproj"/>
+		</Target>
+		<Target Name="CreationBaseCpta:Make">
+			<MSBuild Targets="Make" Projects="01_CreationBaseCpta\CreationBaseCpta.dproj"/>
+		</Target>
+		<Target Name="OuvertureFermetureBaseCpta">
+			<MSBuild Projects="02_OuvertureFermetureBaseCpta\OuvertureFermetureBaseCpta.dproj"/>
+		</Target>
+		<Target Name="OuvertureFermetureBaseCpta:Clean">
+			<MSBuild Targets="Clean" Projects="02_OuvertureFermetureBaseCpta\OuvertureFermetureBaseCpta.dproj"/>
+		</Target>
+		<Target Name="OuvertureFermetureBaseCpta:Make">
+			<MSBuild Targets="Make" Projects="02_OuvertureFermetureBaseCpta\OuvertureFermetureBaseCpta.dproj"/>
+		</Target>
+		<Target Name="CreationBaseCial">
+			<MSBuild Projects="03_CreationBaseCial\CreationBaseCial.dproj"/>
+		</Target>
+		<Target Name="CreationBaseCial:Clean">
+			<MSBuild Targets="Clean" Projects="03_CreationBaseCial\CreationBaseCial.dproj"/>
+		</Target>
+		<Target Name="CreationBaseCial:Make">
+			<MSBuild Targets="Make" Projects="03_CreationBaseCial\CreationBaseCial.dproj"/>
+		</Target>
+		<Target Name="CreationObjetClient">
+			<MSBuild Projects="04_CreationObjetClient\CreationObjetClient.dproj"/>
+		</Target>
+		<Target Name="CreationObjetClient:Clean">
+			<MSBuild Targets="Clean" Projects="04_CreationObjetClient\CreationObjetClient.dproj"/>
+		</Target>
+		<Target Name="CreationObjetClient:Make">
+			<MSBuild Targets="Make" Projects="04_CreationObjetClient\CreationObjetClient.dproj"/>
+		</Target>
+		<Target Name="LectureDevise">
+			<MSBuild Projects="05_LectureDevise\LectureDevise.dproj"/>
+		</Target>
+		<Target Name="LectureDevise:Clean">
+			<MSBuild Targets="Clean" Projects="05_LectureDevise\LectureDevise.dproj"/>
+		</Target>
+		<Target Name="LectureDevise:Make">
+			<MSBuild Targets="Make" Projects="05_LectureDevise\LectureDevise.dproj"/>
+		</Target>
+		<Target Name="CreationCollection">
+			<MSBuild Projects="06_CreationCollection\CreationCollection.dproj"/>
+		</Target>
+		<Target Name="CreationCollection:Clean">
+			<MSBuild Targets="Clean" Projects="06_CreationCollection\CreationCollection.dproj"/>
+		</Target>
+		<Target Name="CreationCollection:Make">
+			<MSBuild Targets="Make" Projects="06_CreationCollection\CreationCollection.dproj"/>
+		</Target>
+		<Target Name="EnregistrementObjet">
+			<MSBuild Projects="07_EnregistrementObjet\EnregistrementObjet.dproj"/>
+		</Target>
+		<Target Name="EnregistrementObjet:Clean">
+			<MSBuild Targets="Clean" Projects="07_EnregistrementObjet\EnregistrementObjet.dproj"/>
+		</Target>
+		<Target Name="EnregistrementObjet:Make">
+			<MSBuild Targets="Make" Projects="07_EnregistrementObjet\EnregistrementObjet.dproj"/>
+		</Target>
+		<Target Name="SuppressionTiers">
+			<MSBuild Projects="08_SuppressionTiers\SuppressionTiers.dproj"/>
+		</Target>
+		<Target Name="SuppressionTiers:Clean">
+			<MSBuild Targets="Clean" Projects="08_SuppressionTiers\SuppressionTiers.dproj"/>
+		</Target>
+		<Target Name="SuppressionTiers:Make">
+			<MSBuild Targets="Make" Projects="08_SuppressionTiers\SuppressionTiers.dproj"/>
+		</Target>
+		<Target Name="HierarchieObjet">
+			<MSBuild Projects="09_HierarchieObjet\HierarchieObjet.dproj"/>
+		</Target>
+		<Target Name="HierarchieObjet:Clean">
+			<MSBuild Targets="Clean" Projects="09_HierarchieObjet\HierarchieObjet.dproj"/>
+		</Target>
+		<Target Name="HierarchieObjet:Make">
+			<MSBuild Targets="Make" Projects="09_HierarchieObjet\HierarchieObjet.dproj"/>
+		</Target>
+		<Target Name="Enumerations">
+			<MSBuild Projects="10_Enumerations\Enumerations.dproj"/>
+		</Target>
+		<Target Name="Enumerations:Clean">
+			<MSBuild Targets="Clean" Projects="10_Enumerations\Enumerations.dproj"/>
+		</Target>
+		<Target Name="Enumerations:Make">
+			<MSBuild Targets="Make" Projects="10_Enumerations\Enumerations.dproj"/>
+		</Target>
+		<Target Name="EcrituresComptables">
+			<MSBuild Projects="11_EcrituresComptables\EcrituresComptables.dproj"/>
+		</Target>
+		<Target Name="EcrituresComptables:Clean">
+			<MSBuild Targets="Clean" Projects="11_EcrituresComptables\EcrituresComptables.dproj"/>
+		</Target>
+		<Target Name="EcrituresComptables:Make">
+			<MSBuild Targets="Make" Projects="11_EcrituresComptables\EcrituresComptables.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="CreationBaseCpta;OuvertureFermetureBaseCpta;CreationBaseCial;CreationObjetClient;LectureDevise;CreationCollection;EnregistrementObjet;SuppressionTiers;HierarchieObjet;Enumerations;EcrituresComptables"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="CreationBaseCpta:Clean;OuvertureFermetureBaseCpta:Clean;CreationBaseCial:Clean;CreationObjetClient:Clean;LectureDevise:Clean;CreationCollection:Clean;EnregistrementObjet:Clean;SuppressionTiers:Clean;HierarchieObjet:Clean;Enumerations:Clean;EcrituresComptables:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="CreationBaseCpta:Make;OuvertureFermetureBaseCpta:Make;CreationBaseCial:Make;CreationObjetClient:Make;LectureDevise:Make;CreationCollection:Make;EnregistrementObjet:Make;SuppressionTiers:Make;HierarchieObjet:Make;Enumerations:Make;EcrituresComptables:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>
