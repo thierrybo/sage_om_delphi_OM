@@ -26,18 +26,19 @@ begin
   try
     try
       if OuvreBaseCpta(BaseCpta,
-        'C:\Documents and Settings\All Users\Documents\Sage\Sage Entreprise\BIJOU.MAE'
+        'C:\Documents and Settings\All Users\Documents\Sage\Sage Entreprise\BIJOU.MAE',
+        '<Administrateur>'
         ) then
       begin
         Ecriture := BaseCpta.FactoryEcriture.Create as IBOEcriture3;
         with Ecriture do
         begin
           Journal     := BaseCpta.FactoryJournal.ReadNumero('BEU');
-          Date        := StrToDateTime('03/07/07');
+          Date        := StrToDateTime('03/07/09');
           Tiers       := BaseCpta.FactoryClient.ReadNumero('CARAT');
           EC_Intitule := 'Acompte';
           EC_RefPiece := 'FA1234';
-          EC_Piece    := Journal.NextEC_Piece[StrToDateTime('03/07/07')];
+          EC_Piece    := Journal.NextEC_Piece[StrToDateTime('03/07/09')];
           EC_Montant  := 123.45;
           EC_Sens     := EcritureSensTypeCredit;
           SetDefault;
