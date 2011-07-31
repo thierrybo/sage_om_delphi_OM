@@ -1,3 +1,9 @@
+{******************************************************************************}
+{                                                                              }
+{       Copyright (c) 2009 MBG partenaires                                     }
+{                                                                              }
+{******************************************************************************}
+
 program ExempleFiltreCollectionStandard;
 
 {$APPTYPE CONSOLE}
@@ -25,7 +31,7 @@ begin
   StreamCial      := TBSCIALApplication3.Create(nil);
   BaseCommerciale := StreamCial.DefaultInterface;
 
-  if (OuvreBaseCial(BaseCommerciale, 'C:\Documents and Settings\All Users\Documents\Sage\Sage Entreprise\Bijou.gcm', '<Administrateur>', 'sage')) then
+  if (OuvreBaseCial(BaseCommerciale, 'C:\Documents and Settings\All Users\Documents\Sage\Sage Entreprise\Bijou.gcm', '<Administrateur>')) then
   begin
 
     { Sélection des articles dont le stock du dépôt principal est inférieur
