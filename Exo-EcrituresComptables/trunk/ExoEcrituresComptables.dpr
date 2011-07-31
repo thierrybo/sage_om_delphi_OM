@@ -34,11 +34,12 @@ begin
   try
     try
       if OuvreBaseCpta(BaseCpta,
-        'C:\Documents and Settings\All Users\Documents\Sage\Sage Entreprise\BIJOU.MAE'
+        'C:\Documents and Settings\All Users\Documents\Sage\Sage Entreprise\BIJOU.MAE',
+        '<Administrateur>'
         ) then
       begin
         Journal       := BaseCpta.FactoryJournal.ReadNumero('VTE');
-        DatePiece     := StrToDateTime('01/07/07');
+        DatePiece     := StrToDateTime('01/07/09');
         IntitulePiece := 'Vente Bague Or';
         NumFacture    := 'FA1234';
         Tiers         := BaseCpta.FactoryClient.ReadNumero('BAGUES');
@@ -47,7 +48,7 @@ begin
         with Ecriture do
         begin
           Journal     := ExoEcrituresComptables.Journal;
-          NumPiece    := Ecriture.Journal.NextEC_Piece[StrToDateTime('03/07/07')];
+          NumPiece    := Ecriture.Journal.NextEC_Piece[StrToDateTime('03/07/09')];
           Date        := DatePiece;
           Tiers       := ExoEcrituresComptables.Tiers;
           EC_Intitule := IntitulePiece;
