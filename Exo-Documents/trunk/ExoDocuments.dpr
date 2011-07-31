@@ -578,7 +578,7 @@ begin
   try
     if OuvreBaseCial(BaseCial,
       'C:\Documents and Settings\All Users\Documents\Sage\Sage Entreprise\Bijou.gcm'
-      , '<Administrateur>', 'sage') then
+      , '<Administrateur>') then
     begin
 
       { Création d'une Mouvement d'entrée en stock : }
