@@ -81,7 +81,7 @@
 						<Parameters Name="UseLauncher">False</Parameters>
 						<Parameters Name="LoadAllSymbols">True</Parameters>
 						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
-						<Parameters Name="RunParams">&quot;C:\Documents and Settings\All Users\Documents\Sage\Sage Entreprise\BIJOU.MAE&quot; &quot;&lt;Administrateur&gt;&quot; &quot;sage&quot; &quot;GRENA&quot; &quot;220207&quot; &quot;FA000006&quot;</Parameters>
+						<Parameters Name="RunParams">&quot;C:\Documents and Settings\All Users\Documents\Sage\Sage Entreprise\BIJOU.MAE&quot; &quot;&lt;Administrateur&gt;&quot; &quot;&quot;</Parameters>
 					</Parameters>
 					<VersionInfo>
 						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>

@@ -166,7 +166,9 @@ var
   I : Integer;
   CollectionTiers : IBICollection;
 begin
-  if ParamCount <> 6 then
+  { HACK : par défaut il n'y a pas de mot de passe sur le compte Administrateur
+    et ParamCount renvoie deux paramètres au lieu de 3 }
+  if ParamCount <> 2 then
   begin
     Application.MessageBox(
         PWideChar('Nombre d''arguments invalide !'),
