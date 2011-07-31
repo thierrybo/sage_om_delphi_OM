@@ -48,7 +48,8 @@ begin
   BaseCpta   := StreamCpta.DefaultInterface;
   try
     if OuvreBaseCpta(BaseCpta,
-      'C:\Documents and Settings\All Users\Documents\Sage\Sage Entreprise\BIJOU.MAE'
+      'C:\Documents and Settings\All Users\Documents\Sage\Sage Entreprise\BIJOU.MAE',
+      '<Administrateur>'
       ) then
     begin
       if SupprimeTiers(BaseCpta, 'ZAN') then
