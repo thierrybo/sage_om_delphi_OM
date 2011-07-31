@@ -27,7 +27,7 @@ begin
       (ABanque.Stream as IBSCPTAApplication3).Name);
     Writeln(StrToOem('L''objet maître est le tiers : '), ABanque.Tiers.CT_Num);
 
-    { Au préalable, crééer une seconde ABanque pour le tiers CARAT }
+    { Au préalable, créer une seconde ABanque pour le tiers CARAT }
     Writeln(
       'La seconde banque est : ',
       StrToOem((
@@ -45,7 +45,8 @@ begin
   BaseCpta   := StreamCpta.DefaultInterface;
   try
     if OuvreBaseCpta(BaseCpta,
-      'C:\Documents and Settings\All Users\Documents\Sage\Sage Entreprise\BIJOU.MAE'
+      'C:\Documents and Settings\All Users\Documents\Sage\Sage Entreprise\BIJOU.MAE',
+      '<Administrateur>'
       ) then
     begin
       AfficheHierarchie((BaseCpta.FactoryTiers.ReadNumero('CARAT').
