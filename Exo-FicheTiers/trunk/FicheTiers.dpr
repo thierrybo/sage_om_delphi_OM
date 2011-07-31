@@ -32,7 +32,8 @@ begin
   try
     try
       if OuvreBaseCial(BaseCial,
-        'C:\Documents and Settings\All Users\Documents\Sage\Sage Entreprise\Bijou.gcm'
+        'C:\Documents and Settings\All Users\Documents\Sage\Sage Entreprise\Bijou.gcm',
+        '<Administrateur>'
         ) then
       begin
 
@@ -46,8 +47,8 @@ begin
           CT_Num        := 'MATHIS';
           CT_Intitule   := 'Mathis SARL';
           CompteGPrinc  := BaseCpta.FactoryCompteG.ReadNumero('4110000');
-          Representant  := BaseCial.FactoryRepresentant.ReadNomPrenom('GENDRON',
-                           'Bernard');
+          Representant  := BaseCpta.FactoryCollaborateur.ReadNomPrenom('GENDRON',
+                           'Bernard');;
           CT_Stat[1]    := 'Est';
           Write;
 
@@ -59,13 +60,13 @@ begin
         Contact := Client.FactoryTiersContact.Create as IBOTiersContact3;
         With Contact do
         begin
-          Nom             := 'Bolle';
-          Prenom          := 'Virginie';
-          Fonction        := 'Comptable';
-          Telephone       := '03 12 34 56 78';
-          TelPortable     := '06 12 34 56 78';
-          ServiceContact  := BaseCpta.FactoryServiceContact.ReadIntitule(
-                             'Comptabilité');
+          Nom               := 'Bolle';
+          Prenom            := 'Virginie';
+          Fonction          := 'Comptable';
+          Telecom.Telephone := '03 12 34 56 78';
+          Telecom.Portable  := '06 12 34 56 78';
+          ServiceContact    := BaseCpta.FactoryServiceContact.ReadIntitule(
+                               'Comptabilité');
           WriteDefault;
         end;
 
