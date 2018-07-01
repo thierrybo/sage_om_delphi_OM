@@ -3,7 +3,7 @@ unit Commun;
 interface
 
 uses
-  Forms, Windows, Objets100Lib_TLB,
+  Forms, Windows, Objets100cLib_TLB,
   StrUtils {pour "case AnsiIndexStr"},
   SysUtils { pour les exceptions },
   Classes { pour ComponentToStringProc },

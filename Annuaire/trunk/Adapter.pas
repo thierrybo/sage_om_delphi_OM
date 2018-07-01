@@ -13,7 +13,7 @@ Implémentation VB cbCtcService contient une interface :
 interface
 
 uses
-  Objets100Lib_TLB;
+  Objets100cLib_TLB;
 
 type
   TControlObjet100 = class

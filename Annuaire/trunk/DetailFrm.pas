@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ComCtrls
-  , Objets100Lib_TLB, StdCtrls, ExtCtrls, ListeTiersFrm, Menus;
+  , Objets100cLib_TLB, StdCtrls, ExtCtrls, ListeTiersFrm, Menus;
 
 type
   TDetailForm = class(TForm)
@@ -79,7 +79,7 @@ type
     { Déclarations privées }
     F_Origine       : TListeTiersForm;
     FiOpen          : Integer;
-    FBaseCpta       : BSCPTAApplication3;
+    FBaseCpta       : BSCPTAApplication100c;
     FTiersCourant   : IBOTiers3;
     FBanqueCourante : IBOTiersBanque3;
     FTiersContact   : IBIContact2;

@@ -4,8 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Menus, OleServer, Objets100Lib_TLB, XPMan, ExtCtrls,
-  {Character pas BDS6,} ActnList;
+  Dialogs, Menus, OleServer, Objets100cLib_TLB, XPMan, ExtCtrls,
+  {Character pas BDS6,} ActnList, System.Actions;
 
 type
   TMainForm = class(TForm)
@@ -36,7 +36,7 @@ type
     procedure FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
     { Déclarations privées }
-    StreamCpta    : TBSCPTAApplication3;
+    StreamCpta    : TBSCPTAApplication100c;
     FBaseCpta     : IBSCPTAApplication3;
     FTiersCourant : IBOTiers3;
 //    FListeTiers   : FrmListeTiers;
@@ -71,7 +71,7 @@ begin
   try
     if OpenDialoglSelFic.Execute then
     begin
-      StreamCpta                  := TBSCPTAApplication3.Create(Self);
+      StreamCpta                  := TBSCPTAApplication100c.Create(Self);
       FBaseCpta                   := StreamCpta.DefaultInterface;
       FBaseCpta.Name              := OpenDialoglSelFic.FileName;
       FBaseCpta.Loggable.UserName := '<Administrateur>';
