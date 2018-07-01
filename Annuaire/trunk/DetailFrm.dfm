@@ -23,15 +23,11 @@ object DetailForm: TDetailForm
     Top = 8
     Width = 416
     Height = 352
-    ActivePage = tshContact
+    ActivePage = tshCoord
     TabOrder = 0
     OnChange = pgcTiersChange
     object tshCoord: TTabSheet
       Caption = 'Coordonn'#233'es'
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object lblNum: TLabel
         Left = 8
         Top = 12
@@ -405,10 +401,6 @@ object DetailForm: TDetailForm
       Caption = 'Contacts'
       ImageIndex = 2
       PopupMenu = pmMnuCtc
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object lbl19: TLabel
         Left = 16
         Top = 16
