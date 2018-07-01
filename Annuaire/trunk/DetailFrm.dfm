@@ -365,7 +365,6 @@ object DetailForm: TDetailForm
         Width = 168
         Height = 21
         Style = csDropDownList
-        ItemHeight = 0
         TabOrder = 1
       end
       object btnBqValider: TButton
@@ -461,7 +460,6 @@ object DetailForm: TDetailForm
         Width = 48
         Height = 21
         Style = csDropDownList
-        ItemHeight = 0
         TabOrder = 1
       end
       object cbCtcService: TComboBox
@@ -470,7 +468,6 @@ object DetailForm: TDetailForm
         Width = 136
         Height = 21
         Style = csDropDownList
-        ItemHeight = 0
         TabOrder = 4
       end
       object edtCtcNom: TEdit
