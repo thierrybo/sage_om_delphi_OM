@@ -7,7 +7,8 @@ uses
   StrUtils {pour "case AnsiIndexStr"},
   SysUtils { pour les exceptions },
   Classes { pour ComponentToStringProc },
-  ComCtrls { pour FreeListViewObjects } ;
+  ComCtrls { pour FreeListViewObjects },
+  Menus { pour TMenuItem };
 
 procedure MessageErreur(AMessage: string);
 function TypeTiers(AType: string): TiersType; overload;
@@ -18,6 +19,7 @@ function StringToComponentProc(Value: string): TComponent;
 procedure FreeListViewObjects(const AListItems: TListItems);
 function SearchExactString(Items: TStrings; const Value: string;
       CaseSensitive: Boolean = True; StartIndex: Integer = -1): Integer;
+function CloneMenuItem(SourceItem: TMenuItem): TMenuItem;
 
 implementation
 
@@ -133,6 +135,19 @@ begin
       end
       else
         Inc(I);
+  end;
+end;
+
+function CloneMenuItem(SourceItem: TMenuItem): TMenuItem;
+var
+  I: integer;
+begin
+  with SourceItem do
+  begin
+    Result := NewItem(Caption, Shortcut, Checked, Enabled, OnClick,
+      HelpContext, Name + 'Copy');
+    for I := 0 to Count - 1 do
+      Result.Add(CloneMenuItem(Items[I]));
   end;
 end;
 
