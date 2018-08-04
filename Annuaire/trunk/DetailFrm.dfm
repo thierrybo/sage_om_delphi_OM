@@ -27,13 +27,13 @@ object DetailForm: TDetailForm
     TabOrder = 0
     OnChange = pgcTiersChange
     object tshCoord: TTabSheet
-      Caption = 'Coordonnées'
+      Caption = 'Coordonn'#233'es'
       object lblNum: TLabel
         Left = 8
         Top = 12
         Width = 43
         Height = 13
-        Caption = 'Numéro :'
+        Caption = 'Num'#233'ro :'
         Layout = tlCenter
       end
       object lblTxtNum: TLabel
@@ -67,7 +67,7 @@ object DetailForm: TDetailForm
         EditLabel.Width = 52
         EditLabel.Height = 13
         EditLabel.BiDiMode = bdLeftToRight
-        EditLabel.Caption = 'Intitulé       '
+        EditLabel.Caption = 'Intitul'#233'       '
         EditLabel.ParentBiDiMode = False
         EditLabel.Layout = tlCenter
         LabelPosition = lpLeft
@@ -92,7 +92,7 @@ object DetailForm: TDetailForm
         Top = 72
         Width = 392
         Height = 128
-        Caption = 'Coordonnées postales'
+        Caption = 'Coordonn'#233'es postales'
         TabOrder = 2
         object ledtCP: TLabeledEdit
           Left = 80
@@ -132,7 +132,7 @@ object DetailForm: TDetailForm
           Height = 21
           EditLabel.Width = 70
           EditLabel.Height = 13
-          EditLabel.Caption = 'Région            '
+          EditLabel.Caption = 'R'#233'gion            '
           EditLabel.Layout = tlCenter
           LabelPosition = lpLeft
           MaxLength = 25
@@ -171,7 +171,7 @@ object DetailForm: TDetailForm
           Height = 21
           EditLabel.Width = 70
           EditLabel.Height = 13
-          EditLabel.Caption = 'Complément    '
+          EditLabel.Caption = 'Compl'#233'ment    '
           LabelPosition = lpLeft
           MaxLength = 35
           TabOrder = 1
@@ -182,7 +182,7 @@ object DetailForm: TDetailForm
         Top = 208
         Width = 392
         Height = 104
-        Caption = 'Télécommunication'
+        Caption = 'T'#233'l'#233'communication'
         TabOrder = 3
         object ledtTelephone: TLabeledEdit
           Left = 72
@@ -191,7 +191,7 @@ object DetailForm: TDetailForm
           Height = 21
           EditLabel.Width = 51
           EditLabel.Height = 13
-          EditLabel.Caption = 'Téléphone'
+          EditLabel.Caption = 'T'#233'l'#233'phone'
           EditLabel.Layout = tlCenter
           LabelPosition = lpLeft
           LabelSpacing = 13
@@ -205,7 +205,7 @@ object DetailForm: TDetailForm
           Height = 21
           EditLabel.Width = 47
           EditLabel.Height = 13
-          EditLabel.Caption = 'Télécopie'
+          EditLabel.Caption = 'T'#233'l'#233'copie'
           LabelPosition = lpLeft
           LabelSpacing = 16
           MaxLength = 21
@@ -245,10 +245,6 @@ object DetailForm: TDetailForm
       Caption = 'Banques'
       ImageIndex = 1
       PopupMenu = pmMnuBqe
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object lbl33: TLabel
         Left = 120
         Top = 16
@@ -282,7 +278,7 @@ object DetailForm: TDetailForm
         Height = 21
         EditLabel.Width = 31
         EditLabel.Height = 13
-        EditLabel.Caption = 'Intitulé'
+        EditLabel.Caption = 'Intitul'#233
         EditLabel.Layout = tlCenter
         LabelPosition = lpLeft
         LabelSpacing = 41
@@ -298,7 +294,7 @@ object DetailForm: TDetailForm
         EditLabel.Height = 13
         EditLabel.Caption = '        Code banque'
         EditLabel.Layout = tlCenter
-        MaxLength = 14
+        MaxLength = 5
         TabOrder = 3
       end
       object ledtBqGuichet: TLabeledEdit
@@ -309,7 +305,7 @@ object DetailForm: TDetailForm
         EditLabel.Width = 87
         EditLabel.Height = 13
         EditLabel.Caption = '        Code guichet'
-        MaxLength = 17
+        MaxLength = 5
         TabOrder = 4
       end
       object ledtBqNumCpte: TLabeledEdit
@@ -319,8 +315,8 @@ object DetailForm: TDetailForm
         Height = 21
         EditLabel.Width = 89
         EditLabel.Height = 13
-        EditLabel.Caption = '        N° de compte'
-        MaxLength = 35
+        EditLabel.Caption = '        N'#176' de compte'
+        MaxLength = 11
         TabOrder = 5
       end
       object ledtBqCle: TLabeledEdit
@@ -330,8 +326,8 @@ object DetailForm: TDetailForm
         Height = 21
         EditLabel.Width = 21
         EditLabel.Height = 13
-        EditLabel.Caption = '  Clé'
-        MaxLength = 3
+        EditLabel.Caption = '  Cl'#233
+        MaxLength = 2
         TabOrder = 6
       end
       object ledtBqCommentaire: TLabeledEdit
@@ -369,6 +365,7 @@ object DetailForm: TDetailForm
         Width = 75
         Height = 23
         Caption = 'Valider'
+        Default = True
         TabOrder = 8
         OnClick = btnBqValiderClick
       end
@@ -421,7 +418,7 @@ object DetailForm: TDetailForm
         Top = 16
         Width = 51
         Height = 13
-        Caption = 'Téléphone'
+        Caption = 'T'#233'l'#233'phone'
         Layout = tlCenter
       end
       object lbl22: TLabel
@@ -478,7 +475,7 @@ object DetailForm: TDetailForm
         Height = 21
         EditLabel.Width = 36
         EditLabel.Height = 13
-        EditLabel.Caption = 'Prénom'
+        EditLabel.Caption = 'Pr'#233'nom'
         LabelPosition = lpLeft
         LabelSpacing = 19
         MaxLength = 35
@@ -502,14 +499,14 @@ object DetailForm: TDetailForm
         Top = 216
         Width = 392
         Height = 96
-        Caption = 'Télécommunication'
+        Caption = 'T'#233'l'#233'communication'
         TabOrder = 6
         object Label4: TLabel
           Left = 8
           Top = 44
           Width = 42
           Height = 13
-          Caption = 'Numéros'
+          Caption = 'Num'#233'ros'
         end
         object ledtCtcTel: TLabeledEdit
           Left = 72
@@ -518,7 +515,7 @@ object DetailForm: TDetailForm
           Height = 21
           EditLabel.Width = 75
           EditLabel.Height = 13
-          EditLabel.Caption = '        Téléphone'
+          EditLabel.Caption = '        T'#233'l'#233'phone'
           MaxLength = 35
           TabOrder = 0
         end
@@ -540,7 +537,7 @@ object DetailForm: TDetailForm
           Height = 21
           EditLabel.Width = 74
           EditLabel.Height = 13
-          EditLabel.Caption = '         Télécopie'
+          EditLabel.Caption = '         T'#233'l'#233'copie'
           MaxLength = 35
           TabOrder = 2
         end

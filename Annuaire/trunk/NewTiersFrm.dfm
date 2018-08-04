@@ -12,6 +12,7 @@ object NewTiersForm: TNewTiersForm
   Font.Style = []
   KeyPreview = True
   OldCreateOrder = False
+  Position = poScreenCenter
   OnKeyPress = FormKeyPress
   PixelsPerInch = 96
   TextHeight = 13
@@ -32,6 +33,7 @@ object NewTiersForm: TNewTiersForm
     EditLabel.Height = 13
     EditLabel.Caption = 'Num'#233'ro tiers   '
     LabelPosition = lpLeft
+    MaxLength = 17
     TabOrder = 0
   end
   object cbPopType: TComboBox
@@ -40,7 +42,6 @@ object NewTiersForm: TNewTiersForm
     Width = 184
     Height = 21
     CharCase = ecUpperCase
-    ItemHeight = 13
     ItemIndex = 0
     TabOrder = 1
     Text = 'CLIENT'
