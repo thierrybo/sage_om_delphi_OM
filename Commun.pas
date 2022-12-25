@@ -10,7 +10,7 @@ interface
 
 uses
   SysUtils,
-  Objets100Lib_TLB,
+  Objets100cLib_TLB,
   Windows;
 
 function StrToOem(const AStr: string): AnsiString;

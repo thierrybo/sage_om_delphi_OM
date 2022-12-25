@@ -11,11 +11,11 @@ program ExoDocuments;
 uses
   SysUtils,
   Commun in '..\Commun.pas',
-  Objets100Lib_TLB,
+  Objets100cLib_TLB,
   ActiveX;
 
 var
-  StreamCial    : TBSCIALApplication3;
+  StreamCial    : TBSCIALApplication100c;
   BaseCial      : IBSCIALApplication3;
   DocVente      : IBODocumentVente3;
   DocStock      : IBODocumentStock3;
@@ -439,7 +439,7 @@ begin
   try
     Acompte       := ADocVente.FactoryDocumentAcompte.Create
                      as IBODocumentAcompte3;
-    BaseCpta      := (ADocVente.Stream as BSCIALApplication3).CptaApplication;
+    BaseCpta      := (ADocVente.Stream as BSCIALApplication100c).CptaApplication;
     with Acompte do
     begin
       DR_Date     := ADateRegl;
@@ -573,7 +573,7 @@ end;
 
 begin
   CoInitialize(nil);
-  StreamCial  := TBSCIALApplication3.Create(nil);
+  StreamCial  := TBSCIALApplication100c.Create(nil);
   BaseCial    := StreamCial.DefaultInterface;
   try
     if OuvreBaseCial(BaseCial,
